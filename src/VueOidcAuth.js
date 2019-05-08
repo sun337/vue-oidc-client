@@ -305,6 +305,9 @@ export function createOidcAuth(
       signIn(args) {
         return signInReal(defaultSignInType, args)
       },
+      signInSilent(args) {
+        return signInReal(SignInType.Silent, args)
+      },
       signOut(args) {
         if (defaultSignInType === SignInType.Popup) {
           const router = this.myRouter
